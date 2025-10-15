@@ -4,8 +4,11 @@ public class PushChannel extends Notification {
     public PushChannel(PaymentType paymentType) {
         this.paymentType = paymentType;
     }
-    public void sendNotification() {
-        this.paymentType.makePayment();
-        System.out.println("Sent Push Notification");
+    public String sendNotification() {
+        String paymentType = this.paymentType.makePayment();
+        String notificationType = "Sent Push Notification";
+        System.out.println(notificationType);
+
+        return paymentType = " " + notificationType + ".";
     };
 }

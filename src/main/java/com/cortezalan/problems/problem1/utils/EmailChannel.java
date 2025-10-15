@@ -4,8 +4,11 @@ public class EmailChannel extends Notification {
     public EmailChannel(PaymentType paymentType) {
         this.paymentType = paymentType;
     }
-    public void sendNotification() {
-        this.paymentType.makePayment();
-        System.out.println("Sent Email Notification");
+    public String sendNotification() {
+        String paymentType = this.paymentType.makePayment();
+        String notificationType = "Sent Email Notification";
+        System.out.println(notificationType);
+
+        return paymentType = " " + notificationType + ".";
     };
 }
