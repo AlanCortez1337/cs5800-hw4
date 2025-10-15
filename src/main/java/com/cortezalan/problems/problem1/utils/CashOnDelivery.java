@@ -1,7 +1,9 @@
 package com.cortezalan.problems.problem1.utils;
 
 public class CashOnDelivery implements PaymentType {
-    public void makePayment() {
-        System.out.println("Made Cash Payment");
+    public String makePayment() {
+        String paymentType = "Made Cash Payment";
+        System.out.println(paymentType);
+        return paymentType;
     }
 }
