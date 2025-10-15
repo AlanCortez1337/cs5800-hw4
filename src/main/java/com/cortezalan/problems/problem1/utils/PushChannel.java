@@ -9,6 +9,6 @@ public class PushChannel extends Notification {
         String notificationType = "Sent Push Notification";
         System.out.println(notificationType);
 
-        return paymentType = " " + notificationType + ".";
+        return paymentType + ", " + notificationType + ".";
     };
 }

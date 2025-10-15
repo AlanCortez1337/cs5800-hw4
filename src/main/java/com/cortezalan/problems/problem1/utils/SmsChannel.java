@@ -9,6 +9,6 @@ public class SmsChannel extends Notification {
         String notificationType = "Sent SMS Notification";
         System.out.println(notificationType);
 
-        return paymentType = " " + notificationType + ".";
+        return paymentType + ", " + notificationType + ".";
     };
 }

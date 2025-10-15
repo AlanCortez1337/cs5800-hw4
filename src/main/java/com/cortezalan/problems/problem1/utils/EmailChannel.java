@@ -9,6 +9,6 @@ public class EmailChannel extends Notification {
         String notificationType = "Sent Email Notification";
         System.out.println(notificationType);
 
-        return paymentType = " " + notificationType + ".";
+        return paymentType + ", " + notificationType + ".";
     };
 }
