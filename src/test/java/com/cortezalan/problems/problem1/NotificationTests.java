@@ -7,18 +7,15 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 public class NotificationTests {
-    private static CashOnDelivery cashPayment;
-    private static OnlinePaymentNotification onlinePayment;
-    private static BitcoinPayment bitcoinPayment;
     private static EmailChannel emailChannel;
     private static SmsChannel smsChannel;
     private static PushChannel pushChannel;
 
     @BeforeAll
     protected static void setUp() throws Exception {
-        cashPayment = new CashOnDelivery();
-        onlinePayment = new OnlinePaymentNotification();
-        bitcoinPayment = new BitcoinPayment();
+        CashOnDelivery cashPayment = new CashOnDelivery();
+        OnlinePaymentNotification onlinePayment = new OnlinePaymentNotification();
+        BitcoinPayment bitcoinPayment = new BitcoinPayment();
 
         emailChannel = new EmailChannel(cashPayment);
         smsChannel = new SmsChannel(onlinePayment);

@@ -14,7 +14,7 @@ public class WorkingRewardsTests {
     private static GoldTier goldTier;
 
     @BeforeAll
-    protected static void setUp() throws Exception {
+    protected static void setUp() {
         bronzeTier = new BronzeTier();
         silverTier = new SilverTier();
         goldTier = new GoldTier();

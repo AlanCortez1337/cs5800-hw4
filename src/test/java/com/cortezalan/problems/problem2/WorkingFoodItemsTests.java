@@ -9,14 +9,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class WorkingFoodItemsTests {
-    private static FoodItemFactory foodItemFactory;
     private static FoodItem burger;
     private static FoodItem fries;
     private static FoodItem hotdog;
 
     @BeforeAll
     protected static void setUp() throws Exception {
-        foodItemFactory = new FoodItemFactory();
+        FoodItemFactory foodItemFactory = new FoodItemFactory();
         burger = foodItemFactory.getFood(FOOD_ITEM.BURGER);
         fries = foodItemFactory.getFood(FOOD_ITEM.FRIES);
         hotdog = foodItemFactory.getFood(FOOD_ITEM.HOTDOG);

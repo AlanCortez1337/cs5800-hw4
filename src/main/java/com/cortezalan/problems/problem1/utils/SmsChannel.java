@@ -10,5 +10,5 @@ public class SmsChannel extends Notification {
         System.out.println(notificationType);
 
         return paymentType + ", " + notificationType + ".";
-    };
+    }
 }

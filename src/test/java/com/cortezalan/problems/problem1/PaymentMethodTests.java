@@ -14,26 +14,26 @@ public class PaymentMethodTests {
     private static BitcoinPayment bitcoinPayment;
 
     @BeforeAll
-    protected static void setUp() throws Exception {
+    protected static void setUp() {
         cashPayment = new CashOnDelivery();
         onlinePayment = new OnlinePaymentNotification();
         bitcoinPayment = new BitcoinPayment();
     }
 
     @Test
-    public void makeCashPayment() throws Exception {
+    public void makeCashPayment() {
         String paymentResult = cashPayment.makePayment();
         assertEquals("Made Cash Payment", paymentResult);
     }
 
     @Test
-    public void makeOnlinePayment() throws Exception {
+    public void makeOnlinePayment() {
         String paymentResult = onlinePayment.makePayment();
         assertEquals("Made Online Payment", paymentResult);
     }
 
     @Test
-    public void makeBitCoinPayment() throws Exception {
+    public void makeBitCoinPayment() {
         String paymentResult = bitcoinPayment.makePayment();
         assertEquals("Made BitCoin Payment", paymentResult);
     }

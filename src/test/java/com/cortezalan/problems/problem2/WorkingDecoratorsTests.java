@@ -14,7 +14,7 @@ public class WorkingDecoratorsTests {
     private static WithColeSlaw withColeSlaw;
 
     @BeforeAll
-    protected static void setUp() throws Exception {
+    protected static void setUp() {
         withAnimalStyle = new WithAnimalStyle();
         withCheese = new WithCheese();
         withColeSlaw = new WithColeSlaw();

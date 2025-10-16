@@ -10,5 +10,5 @@ public class PushChannel extends Notification {
         System.out.println(notificationType);
 
         return paymentType + ", " + notificationType + ".";
-    };
+    }
 }
