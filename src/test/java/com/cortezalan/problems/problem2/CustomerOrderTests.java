@@ -21,7 +21,7 @@ public class CustomerOrderTests {
     private static Customer goldTierBurgerWithAnimalStyleAndHotDogWithColeslawOrder;
 
     @BeforeAll
-    protected static void setUp() throws Exception {
+    protected static void setUp() {
         basicBronzeTierHotDogOrder = new Customer();
         basicBronzeTierBurgerOrder = new Customer();
 
@@ -34,9 +34,9 @@ public class CustomerOrderTests {
 
     @Test
     public void addFoodItemToOrder() {
-        ArrayList<ADD_ON_OPTIONS> addOnOptions = new ArrayList<ADD_ON_OPTIONS>();
+        ArrayList<ADD_ON_OPTIONS> addOnOptions = new ArrayList<>();
         FoodOrderItem foodItem = new FoodOrderItem(FOOD_ITEM.HOTDOG, addOnOptions);
-        ArrayList<FoodOrderItem> customerOrder = new ArrayList<FoodOrderItem>();
+        ArrayList<FoodOrderItem> customerOrder = new ArrayList<>();
 
         customerOrder.add(foodItem);
         basicBronzeTierHotDogOrder.addItemToOrder(foodItem);
@@ -50,7 +50,7 @@ public class CustomerOrderTests {
 
     @Test
     public void getOrderTotalPriceWithBronzeTierCustomer() {
-        ArrayList<ADD_ON_OPTIONS> addOnOptions = new ArrayList<ADD_ON_OPTIONS>();
+        ArrayList<ADD_ON_OPTIONS> addOnOptions = new ArrayList<>();
         FoodOrderItem foodItem = new FoodOrderItem(FOOD_ITEM.BURGER, addOnOptions);
 
         basicBronzeTierBurgerOrder.addItemToOrder(foodItem);
@@ -60,7 +60,7 @@ public class CustomerOrderTests {
 
     @Test
     public void getOrderTotalPriceWithSilverTierCustomer() {
-        ArrayList<ADD_ON_OPTIONS> addOnOptions = new ArrayList<ADD_ON_OPTIONS>();
+        ArrayList<ADD_ON_OPTIONS> addOnOptions = new ArrayList<>();
         addOnOptions.add(ADD_ON_OPTIONS.CHEESE);
 
         FoodOrderItem foodItem = new FoodOrderItem(FOOD_ITEM.FRIES, addOnOptions);
@@ -71,13 +71,13 @@ public class CustomerOrderTests {
 
     @Test
     public void getOrderTotalPriceWithGoldTierCustomer() {
-        ArrayList<ADD_ON_OPTIONS> burgerAddOnOptions = new ArrayList<ADD_ON_OPTIONS>();
+        ArrayList<ADD_ON_OPTIONS> burgerAddOnOptions = new ArrayList<>();
         burgerAddOnOptions.add(ADD_ON_OPTIONS.ANIMAL_STYLE);
 
         FoodOrderItem burgerItem = new FoodOrderItem(FOOD_ITEM.BURGER, burgerAddOnOptions);
         goldTierBurgerWithAnimalStyleAndHotDogWithColeslawOrder.addItemToOrder(burgerItem);
 
-        ArrayList<ADD_ON_OPTIONS> hotdogAddOnOptions = new ArrayList<ADD_ON_OPTIONS>();
+        ArrayList<ADD_ON_OPTIONS> hotdogAddOnOptions = new ArrayList<>();
         hotdogAddOnOptions.add(ADD_ON_OPTIONS.COLESLAW);
 
         FoodOrderItem hotdogItem = new FoodOrderItem(FOOD_ITEM.HOTDOG, hotdogAddOnOptions);

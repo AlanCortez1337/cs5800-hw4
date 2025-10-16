@@ -58,8 +58,6 @@ public class Customer {
             }
         }
 
-        double totalMinusLoyaltyRewards = loyaltyStatus.applyLoyaltyDiscounts(total);
-
-        return totalMinusLoyaltyRewards;
+        return loyaltyStatus.applyLoyaltyDiscounts(total);
     }
 }
