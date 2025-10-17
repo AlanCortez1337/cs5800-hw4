@@ -1,5 +1,7 @@
-package com.cortezalan.problems.problem2.utils;
+package com.cortezalan.problems.problem2;
 
+import com.cortezalan.problems.problem2.utils.Customer;
+import com.cortezalan.problems.problem2.utils.FoodOrderItem;
 import com.cortezalan.problems.problem2.utils.decorators.ADD_ON_OPTIONS;
 import com.cortezalan.problems.problem2.utils.foodItems.FOOD_ITEM;
 import com.cortezalan.problems.problem2.utils.rewards.GoldTier;
