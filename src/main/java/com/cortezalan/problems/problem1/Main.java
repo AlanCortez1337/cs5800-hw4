@@ -1,4 +1,4 @@
-package com.cortezalan.problems;
+package com.cortezalan.problems.problem1;
 
 import com.cortezalan.problems.problem1.utils.*;
 
